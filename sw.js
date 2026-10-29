@@ -1,7 +1,7 @@
 // 星星小學堂：離線使用。第一次打開會把整個程式存進裝置；之後打開都用裝置裡的版本（沒網路也能開），
 // 有網路時在背景下載新版，下次打開就是新版。
-const CACHE = 'xxt-3c3ec881fe';
-const SIZE = 1252592;
+const CACHE = 'xxt-cf04e792f4';
+const SIZE = 1257455;
 const XF = ["x/d2243d060b8c.bin", "x/d49b75e411a9.bin", "x/75ed3e33676b.bin", "x/e2ae832cd858.bin", "x/3f0d0b4bf6d1.bin", "x/7110c0273a16.bin", "x/0d6d815f5db4.bin", "x/0e17d20d97a5.bin", "x/cbdf9fd7e347.bin", "x/b6677bebaec7.bin"];
 const CORE = ['index.html', 'kai.woff2', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', e => {
