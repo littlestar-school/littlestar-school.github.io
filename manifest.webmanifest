@@ -1,0 +1,30 @@
+{
+ "name": "星星小學堂",
+ "short_name": "星星小學堂",
+ "description": "國小數學、國語、英文的學習與評量",
+ "lang": "zh-Hant",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#fff6dd",
+ "theme_color": "#f6be50",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
