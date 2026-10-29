@@ -12,7 +12,7 @@
 | 名稱 | 授權 | 來源 |
 |---|---|---|
 | 全字庫正楷體 TW-Kai | 政府資料開放授權條款第1版（Open Government Data License, version 1.0） | 國家發展委員會 全字庫（CNS11643） |
-| Noto Sans TC | SIL Open Font License 1.1 | Google Fonts |
+| 昭源圓體 Chiron GoRound TC（介面字型） | SIL Open Font License 1.1 | https://github.com/chiron-fonts/chiron-go-round-tc（授權全文：fonts/xr/OFL.txt） |
 | Silkscreen | SIL Open Font License 1.1 | Google Fonts |
 
 ## 資料
