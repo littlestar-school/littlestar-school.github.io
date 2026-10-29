@@ -1,7 +1,7 @@
 // 星星小學堂：離線使用。第一次打開會把整個程式存進裝置；之後打開都用裝置裡的版本（沒網路也能開），
 // 有網路時在背景下載新版，下次打開就是新版。
-const CACHE = 'xxt-ceab5d4d16';
-const SIZE = 1315890;
+const CACHE = 'xxt-4137757c48';
+const SIZE = 1320224;
 const XF = ["x/536499771fd0.bin", "x/d49b75e411a9.bin", "x/18244b61a5b8.bin", "x/e2ae832cd858.bin", "x/3f0d0b4bf6d1.bin", "x/7110c0273a16.bin", "x/0d6d815f5db4.bin", "x/0e17d20d97a5.bin", "x/cbdf9fd7e347.bin", "x/b6677bebaec7.bin"];
 const CORE = ['index.html', 'kai.woff2', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', e => {
@@ -27,7 +27,11 @@ self.addEventListener('fetch', e => {
     }));
     return;
   }
-  if (url.origin === location.origin && /\/(m|x|strokes|fonts\/xr)\/[^/]+\.(mp3|wav|ogg|m4a|weba|webp|png|jpg|gif|svg|bin|json|woff2)$/.test(url.pathname) && !/\/m\/index\.json$/.test(url.pathname)) {   // 語音、圖片、資料檔、筆順：不常變，存進不會隨版本清掉的 xmedia   // 語音、圖片：檔名就是內容雜湊，存過就永遠用裝置裡的
+  if (url.origin === location.origin && /\/v\/map\.json$/.test(url.pathname)) {   // 曉臻錄音對照表：網路優先，離線用存過的
+    e.respondWith(caches.open('xmedia').then(c => fetch(r).then(res => { if (res && res.ok) c.put(r, res.clone()); return res; }).catch(() => c.match(r, {ignoreSearch: true}).then(h => h || new Response('{}', {headers: {'Content-Type': 'application/json'}})))));
+    return;
+  }
+  if (url.origin === location.origin && /\/(m|x|v|strokes|fonts\/xr)\/[^/]+\.(mp3|wav|ogg|m4a|weba|webp|png|jpg|gif|svg|bin|json|woff2)$/.test(url.pathname) && !/\/m\/index\.json$/.test(url.pathname)) {   // 語音、圖片、資料檔、筆順：不常變，存進不會隨版本清掉的 xmedia   // 語音、圖片：檔名就是內容雜湊，存過就永遠用裝置裡的
     e.respondWith(caches.open('xmedia').then(async c => {
       const hit = await c.match(r, {ignoreSearch: true});
       if (hit) return hit;
