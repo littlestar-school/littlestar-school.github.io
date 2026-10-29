@@ -2311,7 +2311,7 @@ h2 .h2-ava{width:40px;height:40px;margin-right:6px;margin-top:-6px}
   var standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
   addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); ev = e; if (!standalone) btn.hidden = false; });
   // 新版偵測：回到前景或每 30 分鐘檢查 GitHub 上的 sw.js 版本，不同就顯示更新按鈕
-  var BUILD = window.XXT_BUILD = 'xxt-8d37ad8f06', upd = document.getElementById('pwa-upd');
+  var BUILD = window.XXT_BUILD = 'xxt-eb5e91ef2a', upd = document.getElementById('pwa-upd');
   var NEWCACHE = '', NEWSIZE = 0, TRIES = 0;
   function check(){
     if (!/^https?:$/.test(location.protocol) || !navigator.onLine) return;
