@@ -2339,6 +2339,9 @@ header.top .tabs button[aria-current="page"]{background:#fff!important;color:#15
   body.tb-has-bot .rest-pill,body.tb-has-bot .fb-btn{bottom:calc(env(safe-area-inset-bottom,0px) + 70px)!important}
 }
 
+/* 設定視窗要蓋在上方工具列、抽屜、意見回饋之上（2026-10-30） */
+.gm-modal{z-index:9700!important}
+
 .xload{min-height:50vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;font-size:20px;font-weight:700;color:#8a7a6a}.xload-dot{width:46px;height:46px;border-radius:50%;border:6px solid #f1dfb5;border-top-color:#e0517f;animation:xspin .8s linear infinite}@keyframes xspin{to{transform:rotate(360deg)}}
 .xe-ins{box-sizing:border-box;max-width:100%}
 .xe-ins-box{padding:12px 16px;margin:10px 0;border:3px solid #ffd54f;border-radius:16px;background:#fffde7;font-size:20px;line-height:1.6;color:#3e2723;white-space:pre-wrap}
@@ -2449,7 +2452,7 @@ header.top .tabs button[aria-current="page"]{background:#fff!important;color:#15
   var standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
   addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); ev = e; if (!standalone) btn.hidden = false; });
   // 新版偵測：回到前景或每 30 分鐘檢查 GitHub 上的 sw.js 版本，不同就顯示更新按鈕
-  var BUILD = window.XXT_BUILD = 'xxt-026f11935e', upd = document.getElementById('pwa-upd');
+  var BUILD = window.XXT_BUILD = 'xxt-b84a2303c9', upd = document.getElementById('pwa-upd');
   var NEWCACHE = '', NEWSIZE = 0, TRIES = 0;
   function check(){
     if (!/^https?:$/.test(location.protocol) || !navigator.onLine) return;
